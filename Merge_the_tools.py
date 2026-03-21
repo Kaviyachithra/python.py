@@ -1,0 +1,17 @@
+def merge_the_tools(string, k):
+    n = len(string)
+  kLengthStringList = []
+for i in range(0, n, k):
+  kLengthStringList.append(string[i : i + k])
+  result = []
+  for word in kLengthStringList:
+    temp = ""
+    for char in word:
+      if char not in temp:
+        temp += char
+        result.append(temp)
+        for val in result:
+        print(val)
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
